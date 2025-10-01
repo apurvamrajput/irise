@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="text" id="nm">
+        <button type="button" onclick="validate()">Submit</button>
+        <span id="nError"></span>
+       
+    </form>
+    <script>
+        const validate = () =>{
+             let n = document.getElementById("nm").value
+             let nPattern = /^[A-Za-z\s\d*]+$/
+             let isValid = true
+             if(!n || !nPattern.test(n)){
+                document.getElementById("nError").innerText = 'Only letter are accept'
+                isValid = false
+             }
+             else{
+                console.log(n);
+                
+             }
+
+        }
+    </script>
+</body>
+</html>

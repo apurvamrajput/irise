@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="l" onclick="l()">light</button>
+    <button id="d"onclick="d()">dark</button>
+    <button id="g" onclick="g()">grey</button>
+    <h1 id="id1" onmouseover="addstyle()" onmouseout="removestyle()">mouse</h1>
+        <h1 id="id2" onmousedown="bgstyle()" onmouseup="rbgstyle()">mouse</h1>
+
+</body>
+<script>
+        function l(){
+            document.body.style.backgroundColor = "white"
+        }
+         function d(){
+             document.body.style.backgroundColor = "black"
+        }
+
+         function g(){
+            document.body.style.backgroundColor = "grey"
+        }
+        function addstyle(){
+            let x = document.getElementById("id1")
+            x.style.color="orange"
+            x.style.textAlign = "center"
+            x.style.fontSize ="40"
+        }
+         function removestyle(){
+            let x = document.getElementById("id1")
+            x.style.color=""
+            x.style.textAlign = "left"
+            x.style.fontSize =""
+        }
+        function bgstyle(){
+            let x = document.getElementById("id2") 
+            x.style.backgroundColor="powderblue"
+        }
+        function rbgstyle(){
+            let x = document.getElementById("id2") 
+            x.style.backgroundColor=""
+        }
+</script>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <!-- id  -->
+    <h1 id ="id1">hello</h1>
+    <h1 id="id1">Good Morning</h1>
+
+    <!-- class -->
+     <h2 class="cls1">Class</h2>
+     <h2 class="cls1">Selector</h2>
+ 
+   <script>
+    // getElementById
+        // let x = document.getElementById("id1")
+        // console.log(x)
+        // x.style.color = "red"
+
+    //querySelector -->htmlcollection,nodelist not return
+        // let m = document.querySelector("#id1")
+        // console.log(m)
+        // m.style.color = "blue"
+
+    //querySelectorAll -->nodeList return
+        // let n = document.querySelectorAll("#id1")[0]
+        // console.log(n)
+        // n.style.backgroundColor = "yellow"
+        // n.textContent = "how are you"
+        // n.innerHTML = "<p>javascript</p>"
+
+        //apply style to multiple element using queryselectorall
+        //querySelectorAll return nodelist and nodelist return forEach property 
+        let n1 = document.querySelectorAll("#id1")
+        console.log(n1)
+        // n1.style.backgroundColor = "blue"
+        n1.forEach((ele)=>{
+            ele.style.color = 'blue'
+        })
+
+    //getElementsByClassName
+    let y = document.getElementsByClassName("cls1")[0]
+    // let y1 = y[0]
+    console.log(y)
+    y.style.backgroundColor = "green"
+
+    //getElemetsByTagName
+    let z = document.getElementsByTagName("h2")[1]
+    console.log(z)
+    z.style.textAlign = "center"
+
+
+
+    
+
+
+
+   </script>
+</body>
+</html>

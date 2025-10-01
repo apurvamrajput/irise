@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        Name:<input type="text" id ="nm">
+        <br>
+        <span style="color:red" id="nerror"></span>
+        <br>
+        <button type="button" onclick="valid()">Click</button>
+    </form>
+    <script>
+        function valid(){
+            let nm = document.getElementById("nm").value //a1
+            let validp = /^[A-Za-z\s\d*&$]+$/
+            //nm!=validp
+            if(!validp.test(nm)|| !nm){
+                document.getElementById("nerror").innerHTML = "only letters are allowed!!!!"
+            }
+            else{
+                console.log(nm)
+            }
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- onclick -->
+   <button id="l" onclick="light('white')">light</button> 
+   <button id="d" onclick="light('black')">dark</button>
+   <button id="g" onclick="light('grey')">grey</button>
+
+   <hr>
+   <!-- mouseover and mouseout -->
+   <h1 onmouseover="addstyle()" onmouseout="rstyle()">MOuse event</h1>
+    <hr>
+   <!-- mouseup and mousedown -->
+    <p onmouseup="add()" onmousedown="remove()">Lorem ipsum dolor sit amet.</p>
+   <script src="event.js"></script>
+    <hr>
+   <!-- mousemove -->
+    <p onmousemove="f()">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui neque consequatur quam. Explicabo soluta repellendus libero sed assumenda autem omnis aliquam minima fuga esse vitae repudiandae accusamus deserunt nisi illo, dicta asperiores cupiditate laborum commodi.</p>
+    <h1>keyboard event</h1>
+    <!-- keypress and keydown -->
+     <input type="text" placeholder="enter name" id="nm" onkeypress="press()">
+
+     <!--  -->
+</body>
+</html>
