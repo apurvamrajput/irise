@@ -1,0 +1,44 @@
+*{
+    padding:0px;
+    margin:0px;
+}
+body{
+    background: #EEAECA;
+background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 187, 233, 1) 100%);
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    height: 100vh;
+}
+#vform{
+     background-color: rgb(75, 91, 91);
+     padding:20px;
+     height:450px;
+     width: 300px;
+}
+input{
+    height: 25px;
+    width:300px;
+}
+.btn{
+    text-align: center;
+    margin-top: 20px;
+}
+.btn button{
+    height:30px;
+    width:80px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.container h1{
+    text-align: center;
+}
+.gform{
+    margin-bottom: 30px;
+}
+.error{
+    color:red;
+}

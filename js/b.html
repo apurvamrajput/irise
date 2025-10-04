@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background: linear-gradient(135deg, black, rgb(157, 243, 244));
+            background-repeat: no-repeat;
+            height: 100vh;
+            color: antiquewhite;
+            font-size: 20px;
+            ;
+
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+
+
+        }
+
+        #vform {
+            background-color: cadetblue;
+            padding: 20px;
+
+        }
+
+        input {
+            height: 20px;
+            width: 400px;
+            padding: 10px;
+            border-radius: 15px;
+        }
+
+        .form-grp {
+            margin-bottom: 20px;
+        }
+
+        .error {
+            color: red;
+        }
+
+        .btn {
+            text-align: center;
+
+        }
+
+        button {
+            height: 40px;
+            font-size: 20px;
+            padding: 10px
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="vform">
+
+            <div class="form-grp">
+                <label for="nm">Name</label>
+                <br>
+                <input type="text" id="nm">
+                <br>
+                <span class="error" id="nameError"></span>
+            </div>
+            <div class="form-grp">
+                <label for="m">Email</label>
+                <br>
+                <input type="email" id="m">
+                <br>
+                <span class="error" id="mailError"></span>
+            </div>
+            <div class="form-grp">
+                <label for="pwd">password</label>
+                <br>
+                <input type="password" id="pwd">
+                <br>
+                <span class="error" id="pwdError"></span>
+            </div>
+            <div class="form-grp">
+                <label for="num">Number</label>
+                <br>
+                <input type="text" id="num">
+                <br>
+                <span class="error" id="numError"></span>
+            </div>
+            <div class="btn">
+                <button type="button" onclick="valid()">submit</button>
+            </div>
+    </div>
+    </form>
+    </div>
+    <script>
+
+
+
+        function valid() {
+            document.querySelectorAll('.error').forEach((ele)=>ele.innerText = '')
+
+            let nm = document.getElementById("nm").value
+            let mail = document.getElementById("m").value
+            let pwd = document.getElementById("pwd").value
+            let num = document.getElementById("num").value
+
+            // console.log(nm, mail, pwd, num)
+
+
+            let nmvalid = /^[A-Za-z\s]+$/
+            let mailvalid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+            let pwdvalid = /^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[#$%^&*])[A-Za-z\d#$%^&*]{6,10}$/
+            let numvalid = /^[6-9]{1}[0-9]{9}$/
+
+            
+            if (!nm || !nmvalid.test(nm)) {
+                document.getElementById("nameError").innerText = "enter only letter"
+
+
+            }
+            if (!mail || !mailvalid.test(mail)) {
+                document.getElementById("mailError").innerText = "enter "
+
+            }
+            if (!pwd || !pwdvalid.test(pwd)) {
+                document.getElementById("pwdError").innerText = "enterdfkef"
+
+            }
+            if (!num || !numvalid.test(num)) {
+                document.getElementById("numError").innerText = "enter only letter"
+
+            }
+            else {
+                console.log("Form submitted:", {nm, mail, pwd, num} )
+                document.getElementById('vform').reset()
+                alert("Form Submitted Successfully ✅")
+            }
+
+
+
+        }
+    </script>
+</body>
+
+</html>

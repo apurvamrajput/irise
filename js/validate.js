@@ -10,7 +10,7 @@ const validate = () =>{
     const password = document.querySelector('#password').value.trim()
     const contact = document.querySelector('#contact').value.trim()
 
-    //Above entered data have to be validate first for that we use regEx
+    //Above entered data have to be validate first for that w use regEx
 
     const fullnamePattern = /^[A-Za-z\s]+$/
     //Only Letters are allowed.

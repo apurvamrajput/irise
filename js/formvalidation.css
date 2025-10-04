@@ -68,7 +68,7 @@ input:focus{
     transform: scale(1.05);
 }
 
-@keyframes floating {
+/* @keyframes floating {
     0%{transform: translateY(0px);}
     50%{ transform: translateY(-5px);}
     100%{ transform: translateY(0px);}
@@ -76,21 +76,21 @@ input:focus{
 
 .container{
     animation: floating 4s infinite;
-}
+} */
 
 .error{
     color: red;
     font-size: 15px;
 }
 
-.formdata{
+/* .formdata{
     border-collapse: collapse;
     width: 75%;
     margin: auto;    
     background-color: black;
     color: aliceblue;
     font-size: 20px;
-}
+} */
 h2{
     text-align: center;
     margin-top: 25px;

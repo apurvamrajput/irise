@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="vaild.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" id="vform">
+            <h1>Login</h1>
+            <div class="gform">
+                <label for="nm">Username</label>
+                <br>
+                <input type="text" id="nm">
+                <br>
+                <span class="error" id="nmError"></span>
+            </div>
+
+             <div class="gform">
+                <label for="mail">Email</label>
+                <br>
+                <input type="email" id="mail">
+                <br>
+                <span class="error" id="mailError"></span>
+            </div>
+             <div class="gform">
+                <label for="pwd">password</label>
+                <br>
+                <input type="password" id="pwd">
+                <br>
+                <span class="error" id="pwdError"></span>
+            </div>
+             <div class="gform">
+                <label for="num">mobile Num</label>
+                <br>
+                <input type="text" id="num">
+                <br>
+                <span class="error" id="numError"></span>
+            </div>
+            <div class="btn">
+                <button type="button" onclick="valid()">Submit</button>
+            </div>
+        </form>
+    </div>
+    <!-- js -->
+     <script src="vaild.js"></script>
+</body>
+</html>
