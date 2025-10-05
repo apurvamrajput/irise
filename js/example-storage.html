@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id= "wel">Welcome!!!</h1>
+    <input type="text" id="nm" placeholder="enter name">
+    <button type="button" id="savebtn">login</button>
+    <button type="button" id="logout">Logout</button>
+
+    <script>
+        
+        const savebtn = document.getElementById("savebtn")
+        const wel = document.getElementById("wel")
+
+        savebtn.addEventListener("click",()=>{
+            const name = document.getElementById("nm").value
+            console.log("************")
+
+            if(name){
+                localStorage.setItem("username",name)
+                wel.textContent = "welcome  " + name +"!!"
+                nm.value = " "
+
+            }
+        })
+
+        //clean storage
+        logout.addEventListener("click",()=>{
+            sessionStorage.clear()
+            localStorage.removeItem("username")
+            alert("you have logged out!!")
+        })
+        
+
+    </script>
+
+</body>
+</html>

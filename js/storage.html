@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+
+    <script>
+        //set data 
+            // syntax:localStorage.setItem(ket,value)
+        localStorage.setItem("name","apurva")
+        localStorage.setItem("city","pune")
+
+        //get data 
+            // syntax:localStorage.getItem(key_nm)
+        let nm = localStorage.getItem("name")
+        console.log(nm)
+
+        //delete (single)particular data
+            //syntax:localStorage.removeItem(ket_nm)
+        localStorage.removeItem("name")
+
+        //all data delete
+            //syntax:localStorage.clear()
+        localStorage.clear()
+
+        //length
+        let len = localStorage.length
+       console.log(len);
+
+
+       //create object
+       let user = {name:"abc",age:25,city:"pune"}
+       console.log(user,typeof user)//object
+
+       //object convert into string -->stringify()
+       const userData = JSON.stringify(user)
+       console.log(userData)//string
+
+       //store in local storage
+       localStorage.setItem("userInfo",userData)
+
+        //string into original object
+        let or = JSON.parse(userData)
+        console.log(or)
+
+
+        //session storage
+        sessionStorage.setItem("username","irise")
+        sessionStorage.setItem("city","pune")
+
+        let x = sessionStorage.getItem("city")
+        console.log(x)
+
+
+    </script>
+</body>
+</html>
