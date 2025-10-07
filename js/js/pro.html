@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let prom = new Promise((resolve,reject)=>{
+        //     if (true){
+        //         resolve("welcome")
+        //     }
+        //     else{
+        //         reject("failed")
+        //     }
+        // })
+        // console.log(prom);
+        
+        // prom.then((m)=>{
+        //     console.log(m)
+        // }).catch((m)=>{
+        //     console.log(m)
+        // })
+
+        // const get_data=fetch("https://jsonplaceholder.typicode.com/users")  
+        // console.log(get_data)
+         
+        // get_data.then((m)=>{
+        //     return m.json()
+        // }).then((c)=>{
+        //     console.log(c)
+        // })
+
+
+        async function f(){
+            try{
+            let res = await fetch("https://jsonplaceholder.typicode.com/user")
+             console.log(res)//res
+             let r = await res.json()
+             console.log(r)
+            }catch(error){
+                console.log('error', error);
+                
+            }
+            
+
+        }
+        f()
+
+       
+        
+    </script>
+</body>
+</html>
